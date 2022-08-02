@@ -10,16 +10,16 @@ const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: 'jishnupunathil000@gmail.com',
-        pass: 'ylczzapvavremurk'
+        pass: '-----' //generate app password and provide here
     }
 })
 
 app.get('/sendMail', (req, res) => {
     var mailOptions = {
         from: 'jishnupunathil000@gmail.com',
-        to: 'sofymolsunil168@gmail.com,jishnupunathil000@gmail.com,jaseemfz7@gmail.com',
-        subject: 'vazhayod enik parayan ullath',
-        html:'<h1>oru paniem illenkil abhimanikukayalla vendath,apamanapedukayan vendath</h1>'
+        to: 'jishnupunathil000@gmail.com',
+        subject: 'Mail from NodeJs',
+        html:'<h1>Nodemailer works</h1>'
     }
 
     transporter.sendMail(mailOptions, (err, info) => {
